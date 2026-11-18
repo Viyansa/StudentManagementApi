@@ -1,6 +1,10 @@
-﻿namespace StudentManagementApi.Repositories.Interfaces
+﻿using StudentManagementApi.Models;
+
+namespace StudentManagementApi.Repositories.Interfaces
 {
-    public class IUserRepository
+    public interface IUserRepository
     {
+        Task<User?> GetByUsernameAsync(string username);
+        Task AddAsync(User user);
     }
 }

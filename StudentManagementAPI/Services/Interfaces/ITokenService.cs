@@ -1,6 +1,9 @@
-﻿namespace StudentManagementApi.Services.Interfaces
+﻿using StudentManagementApi.Models;
+
+namespace StudentManagementApi.Services.Interfaces
 {
-    public class ITokenService
+    public interface ITokenService
     {
+        string CreateToken(User user);
     }
 }
